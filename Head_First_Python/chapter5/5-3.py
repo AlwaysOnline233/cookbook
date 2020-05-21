@@ -49,6 +49,9 @@ print(sorted(clean_sarah))
 
 # sort()和 sorted() 默认升序排序，传入参数reverse=True降序排序
 
-
-
-
+# 第31行代码至48行代码可以用列表推导代码替换
+print('————————列表推导————————————')    # 5-4 列表推导
+print(sorted([sanitize(t) for t in james]))    # 将列表转换为经过清理的有序版本
+print(sorted([sanitize(t) for t in julie]))
+print(sorted([sanitize(t) for t in mikey]))
+print(sorted([sanitize(t) for t in sarah]))

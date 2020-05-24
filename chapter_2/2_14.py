@@ -42,3 +42,22 @@ def sample():
 text = ''.join(sample())        # 用 join() 将片段合并
 print(text)
 
+
+def combine(source, maxsize):
+    parts = []
+    size = 0
+    for part in source:
+        parts.append(part)
+        size += len(part)
+        if size > maxsize:
+            yield ''.join(parts)
+            parts = []
+            size = 0
+    yield ''.join(parts)
+
+
+print('————————————————————————————')
+print('结合文件操作')
+with open('textfile', 'w') as f:
+    for part in combine(sample(), 32768):
+        f.write(part)

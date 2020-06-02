@@ -3,14 +3,19 @@
 from urllib.request import urlopen
 
 
+# 使用闭包来将单个方法的类转换成函数
 class UrlTemplate:
     def __init__(self, template):
         self.template = template
 
     def open(self, **kwargs):
-        return urlopen(self.template.format_map(kwargs))
+        return urlopen(self.template.format_map(kwargs))  # 根据某个模板方案来获取到URL链接地址
 
-# Example use. Download stock data from yahoo
-yahoo = UrlTemplate('http://finance.yahoo.com/d/quotes.csv?s={names}&f={fields}')
-for line in yahoo.open(names='IBM,AAPL,FB', fields='sl1c1v'):
-    print(line.decode('utf-8'))
+
+# 函数代替上面的类
+def urltemplate(template):
+    def opener(**kwargs):
+        return urlopen(template.format_map(kwargs))
+    return opener
+
+

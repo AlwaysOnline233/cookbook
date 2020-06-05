@@ -17,6 +17,21 @@ class Solution:
             dct[n] = i
 
 
+class Solution2:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for ind, num in enumerate(nums):
+            hashmap[num] = ind
+        for i, num in enumerate(nums):
+            j = hashmap.get(target - num)
+            if j is not None and i != j:
+                return [i, j]
+
+
 a = Solution()
 print(a.twoSum([2, 7, 11, 15], 9))
 print(a.twoSum([2, 11, 7, 15], 9))
+
+b = Solution2()
+print(b.twoSum([2, 7, 11, 15], 9))
+print(b.twoSum([2, 11, 7, 15], 9))

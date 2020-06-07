@@ -26,6 +26,7 @@ from typing import List
 import collections
 
 
+# 广度搜索
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
         wordList = set(wordList)

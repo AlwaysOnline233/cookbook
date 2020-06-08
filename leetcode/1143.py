@@ -7,6 +7,8 @@
 来源：力扣（LeetCode）
 '''
 
+
+# 动态规划
 class Solution:
     def longestCommonSubsequence(self, str1: str, str2: str) -> int:
         m, n = len(str1), len(str2)

@@ -7,6 +7,7 @@
 输入: 120        输出: 21
 假设环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。
 如果反转后整数溢出那么就返回 0。
+来源：力扣（LeetCode）
 '''
 
 
@@ -15,7 +16,7 @@ class Solution:
         flag = 1 if x >= 0 else -1    # x>=0,flag=1;反之flag=-1
         abs_x = abs(x)
         x_str = str(abs_x)
-        reverse_x_str = x_str[::-1]
+        reverse_x_str = x_str[::-1]   # [::-1]相当于 a[-1:-len(a)-1:-1]，从最后一个元素到第一个元素复制一遍，即倒序
         reverse_x_int = int(reverse_x_str)*flag
         if -2**31 <= reverse_x_int <= 2**31 -1:
             return reverse_x_int

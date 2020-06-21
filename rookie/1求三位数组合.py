@@ -18,8 +18,7 @@ for i in lst:
                 number_lst.append((i*100 + j*10 + k))
 
 
-print('符合条件的数字有：')
-print(len(number_lst))
+print('符合条件的数字有：{}个'.format(len(number_lst)))
 for item in number_lst:
     print(item)
 

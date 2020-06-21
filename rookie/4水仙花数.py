@@ -4,9 +4,9 @@
 比如153，1的3次方 + 5的三次方 + 3的三次方 等于153
 '''
 
-for num in range(150, 1000):
-    a = int(num // 100)
-    b = int((num / 10) % 10)
-    c = int(num % 10)
+for num in range(100, 1000):
+    a = num // 100
+    b = num // 10 % 10
+    c = num % 10
     if a**3 + b**3 + c**3 == num:
         print(num)

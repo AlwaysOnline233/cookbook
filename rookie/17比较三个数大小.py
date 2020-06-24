@@ -61,7 +61,7 @@ f2([1, 3, 2])
 f2([1, 3, 0])
 
 
-# Max函数
+# Max函数       (从大到小输出)
 def f3(nums):
     while True:          # 此处不能使用for循环，不能一边迭代该列表，同时删除或者增加该列表
         x = max(nums)
@@ -71,5 +71,11 @@ def f3(nums):
             print(nums[0])
             break
 
-f3([1, 2, 3])
+f3([3, 2, 1])
 f3([1, 2, 2])
+
+
+# 用列表的sort()
+nums = [10, 5, 5]
+nums.sort()
+print(nums)

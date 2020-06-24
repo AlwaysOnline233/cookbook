@@ -9,7 +9,6 @@ print(f('asdzxc'))
 print(f('abcdcba'))
 
 
-
 def f2(string):
     for i in range(len(string)):
         if string[i] != string[len(string) - i-1]:

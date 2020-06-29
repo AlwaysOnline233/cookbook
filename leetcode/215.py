@@ -7,3 +7,19 @@
 输入: [3,2,3,1,2,4,5,5,6] 和 k = 4         输出: 4
 可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
 '''
+
+
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        nums.sort(reverse=True)
+        return nums[k-1]
+
+
+a = Solution()
+print(a.findKthLargest([3, 2, 1, 5, 6, 4], 2))
+print(a.findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4))

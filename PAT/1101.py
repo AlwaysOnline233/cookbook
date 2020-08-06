@@ -5,7 +5,7 @@
 '''
 
 
-def main():
+def main(): 
     num = int(input())
     line = input().split(" ")
     a = [int(x) for x in line]

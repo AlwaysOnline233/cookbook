@@ -1,8 +1,8 @@
-### Here are the basics of python.
-### updating...
+##### Here are the basics of python.
+##### updating...
 &nbsp;  &nbsp; &nbsp;
 
-# Head First Python
+# - Head First Python
 ### Code samples from the "Head First Python"
 &nbsp; &nbsp;
 

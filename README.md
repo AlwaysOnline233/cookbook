@@ -2,7 +2,7 @@
 ##### updating...
 &nbsp;  &nbsp; &nbsp;
 
-# - Head First Python
+# -Head First Python
 ### Code samples from the "Head First Python"
 &nbsp; &nbsp;
 
